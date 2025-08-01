@@ -79,58 +79,6 @@ const HomePage = () => {
                 <p>No products available.</p>
               )}
             </div>
-
-            <div className="categories-item">
-              <div className="title-md">
-                <h3>{categories[0]?.name || "No Category Available"}</h3>
-              </div>
-              {productStatus === STATUS.LOADING ? (
-                <Loader />
-              ) : catProductsOne.length > 0 ? (
-                <ProductList products={catProductsOne} />
-              ) : (
-                <p>No products available in this category.</p>
-              )}
-            </div>
-
-            <div className="categories-item">
-              <div className="title-md">
-                <h3>{categories[1]?.name || "No Category Available"}</h3>
-              </div>
-              {productStatus === STATUS.LOADING ? (
-                <Loader />
-              ) : catProductsTwo.length > 0 ? (
-                <ProductList products={catProductsTwo} />
-              ) : (
-                <p>No products available in this category.</p>
-              )}
-            </div>
-
-            <div className="categories-item">
-              <div className="title-md">
-                <h3>{categories[2]?.name || "No Category Available"}</h3>
-              </div>
-              {productStatus === STATUS.LOADING ? (
-                <Loader />
-              ) : catProductsThree.length > 0 ? (
-                <ProductList products={catProductsThree} />
-              ) : (
-                <p>No products available in this category.</p>
-              )}
-            </div>
-
-            <div className="categories-item">
-              <div className="title-md">
-                <h3>{categories[3]?.name || "No Category Available"}</h3>
-              </div>
-              {productStatus === STATUS.LOADING ? (
-                <Loader />
-              ) : catProductsFour.length > 0 ? (
-                <ProductList products={catProductsFour} />
-              ) : (
-                <p>No products available in this category.</p>
-              )}
-            </div>
           </div>
         </div>
       </div>

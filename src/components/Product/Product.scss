@@ -1,12 +1,13 @@
 @import "../../App.scss";
 
-.product-item{
+.product-item {
     position: relative;
     border-radius: 8px;
     box-shadow: rgba(50, 50, 93, 0.05) 0px 2px 5px -1px, rgba(0, 0, 0, 0.05) 0px 1px 3px -1px;
     transition: $transition-ease;
+    perspective: 1000px;
 
-    .category{
+    .category {
         position: absolute;
         left: -5px;
         top: 1.6rem;
@@ -17,7 +18,7 @@
         padding: 0.2rem 1rem;
         box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 
-        &::after{
+        &::after {
             position: absolute;
             content: "";
             left: 0;
@@ -31,55 +32,61 @@
         }
     }
 
-    &-img{
+    &-img {
         padding-bottom: 4px;
         margin-bottom: 12px;
         height: 250px;
-        overflow: hidden!important;
+        overflow: hidden !important;
         border-top-left-radius: 8px;
         border-top-right-radius: 8px;
     }
 
-    &-info{
+    &-info {
         padding: 0 12px 20px 12px;
         text-align: center;
         font-family: $font-family-manrope;
         opacity: 0.8;
 
-        .brand{
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        padding-bottom: 0.6rem;
-            span{
-                &:first-child{
+        .brand {
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            padding-bottom: 0.6rem;
+
+            span {
+                &:first-child {
                     margin-right: 3px;
                 }
             }
         }
-        .title{
+
+        .title {
             font-size: 14.5px;
             font-weight: 500;
             letter-spacing: 0.3px;
         }
-        .price{
+
+        .price {
             position: relative;
-            .old-price{
+
+            .old-price {
                 opacity: 0.7;
                 text-decoration: line-through;
                 font-size: 12px;
             }
-            .new-price{
+
+            .new-price {
                 margin: 0 1rem;
                 font-weight: 700;
                 font-size: 16px;
             }
-            .discount{
+
+            .discount {
                 font-size: 13px;
                 font-weight: 600;
                 font-family: $font-family-poppins;
                 color: darken($clr-orange, 5%);
             }
 
-            &::after{
+            &::after {
                 content: "";
                 position: absolute;
                 top: calc(100% + 6px);
@@ -90,7 +97,9 @@
         }
     }
 
-    &:hover{
-        box-shadow: rgba(50, 50, 93, 0.1) 0px 2px 5px -1px, rgba(0, 0, 0, 0.1) 0px 1px 20px -1px;
+    &:hover {
+        transform: scale(1.03) rotateX(1deg) rotateY(1deg) translateY(-5px);
+        box-shadow: rgba(50, 50, 93, 0.2) 0px 10px 20px -5px, rgba(0, 0, 0, 0.15) 0px 10px 40px -10px;
+
     }
 }
